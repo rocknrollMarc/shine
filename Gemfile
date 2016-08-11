@@ -27,7 +27,7 @@ gem 'bower-rails'
 
 gem 'meta_request'
 
-gem 'ffaker'
+gem 'faker'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
