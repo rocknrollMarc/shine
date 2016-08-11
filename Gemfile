@@ -36,9 +36,15 @@ gem 'ffaker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'angular-rails-templates'
+gem 'sprockets', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+	gem 'rspec-rails', '~> 3.0'
+	gem 'poltergeist'
+	gem 'database_cleaner'
+	gem 'teaspoon-jasmine'
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
