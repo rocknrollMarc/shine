@@ -26,6 +26,8 @@ gem 'devise', '~> 3.5'
 gem 'bower-rails'
 
 gem 'meta_request'
+
+gem 'ffaker'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
