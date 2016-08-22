@@ -23,4 +23,12 @@ class CustomerSearchTerm
 
 		@order = "last_name asc"
 	end
+
+	def starts_with/(search_term)
+		search_term + "%"
+	end
+
+	def case_insensitive_search(field_name)
+		"lower(#{field_name}) like :#{field_name}"
+	end
 end
