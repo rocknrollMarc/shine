@@ -4,23 +4,20 @@
 </header>
 <section class="search-form">
   <form>
-    <div class="input-group input-group-lg">
-      <label for="search.keywords" class="sr-only">Keywords</label>
-      <input type="text" 
-             name="keywords" 
-             class="form-control input-lg"
-             placeholder="First Name, Last Name, or Email Address"
-             ng-model="keywords">
-      <span class="input-group-btn">
-        <button class="btn btn-primary btn-lg" 
-                ng-click="search(keywords)">
-          Find Customers
-        </button>
-      </span>
-    </div>
+    <label for="search.keywords" class="sr-only">Keywords</label>
+    <input type="text" 
+           name="keywords" 
+           class="form-control input-lg"
+           placeholder="First Name, Last Name, or Email Address"
+           ng-change="search(keywords)"
+           ng-model="keywords">
   </form>
 </section>
-<section class="search-results" ng-if="customers">
+<aside class="sr-only loading-progress">
+  <span ng-if="loading" class="loading">Loading</span>
+  <span ng-if="!loading" class="not-loading">Done Loading</span>
+</aside>
+<section class="search-results" ng-if="customers.length > 0">
   <header>
     <h1 class="h3">Results</h1>
   </header>
