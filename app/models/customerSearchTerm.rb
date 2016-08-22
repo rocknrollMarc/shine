@@ -24,7 +24,7 @@ class CustomerSearchTerm
 		@order = "last_name asc"
 	end
 
-	def starts_with/(search_term)
+	def starts_with(search_term)
 		search_term + "%"
 	end
 
