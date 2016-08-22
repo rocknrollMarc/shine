@@ -37,13 +37,30 @@ gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-nav'
+gem 'pry-coolline'
+gem 'awesome_print'
+
+gem 'ruby-growl'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 	gem 'rspec-rails', '~> 3.0'
 	gem 'poltergeist'
   gem 'byebug'
 
+	gem 'guard-rspec'
+	gem 'guard-bundler'
+	gem 'terminal-notifier-guard'
+	gem 'guard-rails'
+	gem 'guard-teaspoon'
+	gem 'guard-migrate'
+	gem 'guard-webrick'
+	gem 'guard-railstestdb'
+
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+	gem 'web-console', group: :development
 end
 

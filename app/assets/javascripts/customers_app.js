@@ -2,12 +2,12 @@ var app = angular.module('customers',[]);
 
 app.controller("CustomerSearchController", [ 
           '$scope','$http',
-  function($scope , $http) {                         
+  function($scope , $http) {
 
     var page = 0;
 
     $scope.customers = [];
-    $scope.search = function(searchTerm) {   
+    $scope.search = function(searchTerm) {
       $scope.loading = true;
       if (searchTerm.length < 3) {
         return;
