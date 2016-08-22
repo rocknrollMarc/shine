@@ -20,18 +20,19 @@
     </div>
   </form>
 </section>
-<section class="search-results">
+<section class="search-results" ng-if="customers">
   <header>
     <h1 class="h3">Results</h1>
   </header>
-  <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+  <%= render partial: "pager", 
+             locals: { keywords: @keywords, page: @page } %>
 
   <ol class="list-group">
     <li class="list-group-item clearfix" 
         ng-repeat="customer in customers">
       <h3 class="pull-right">
         <small class="text-uppercase">Joined</small>
-        {{ customer.created_at }}
+        {{ customer.created_at | date }}
       </h3>
       <h2 class="h3">
         {{ customer.first_name }} {{ customer.last_name }}
@@ -40,7 +41,7 @@
       <h4>{{ customer.email }}</h4>
     </li>
   </ol>
-  <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+  <%= render partial: "pager", 
+             locals: { keywords: @keywords, page: @page } %>
 </section>
 </article>
-
