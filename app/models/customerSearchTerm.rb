@@ -31,4 +31,8 @@ class CustomerSearchTerm
 	def case_insensitive_search(field_name)
 		"lower(#{field_name}) like :#{field_name}"
 	end
+
+	def extract_name(email)
+		email.gsub(/@.*$/,'').gsub(/[0-9]+/,'')
+	end
 end
