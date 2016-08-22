@@ -19,7 +19,10 @@
   <header>
     <h1 class="h3">Results</h1>
   </header>
+  <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+
   <ol class="list-group">
+    <!-- ... -->
     <% @customers.each do |customer| %>
       <li class="list-group-item clearfix">
         <h3 class="pull-right">
@@ -34,4 +37,5 @@
       </li>
     <% end %>
   </ol>
+  <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
 </section>
