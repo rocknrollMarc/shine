@@ -56,11 +56,19 @@ group :development, :test do
 	gem 'terminal-notifier-guard'
 	gem 'guard-rails'
 	gem 'guard-teaspoon'
-	gem 'guard-migrate'
-	gem 'guard-webrick'
-	gem 'guard-railstestdb'
+	gem 'capybara'
+	gem 'factory_girl_rails'
+	gem 'database_cleaner'
+	gem 'teaspoon'
+	gem "teaspoon-jasmine"
+	gem 'rspec-legacy_formatters'
+
+	gem 'super-pry-rails'
+	gem 'quiet_assets'
+	gem 'binding_of_caller'
+	gem 'better_errors'
+	gem 'launchy'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-	gem 'web-console', group: :development
 end
 
